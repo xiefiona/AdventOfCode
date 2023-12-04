@@ -29,7 +29,7 @@ def calculate_part_2(message):
         valid_cards[copy_card] += valid_cards[card_num]
     
 ans = 0
-with open("day4test.txt") as f:
+with open("input.txt") as f:
     for message in f:
         ans += calculate(message.strip())
         calculate_part_2(message.strip())

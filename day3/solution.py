@@ -55,7 +55,7 @@ def parse(table):
 
 table = []
 
-with open("day3input.txt") as f:
+with open("input.txt") as f:
     for message in f.readlines():
         message = message.strip()
         mess = []

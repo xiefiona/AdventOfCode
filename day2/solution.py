@@ -38,7 +38,7 @@ def decode_part_2(message):
     return product
     
 ans = 0
-with open("day2input.txt") as f:
+with open("input.txt") as f:
     for message in f:
         ans += decode_part_2(message)
 
