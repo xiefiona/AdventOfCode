@@ -17,8 +17,6 @@ start_map = {
     (0,-1): ['-', 'L', 'F']
 }
 
-hoz = [('-','-'), ('-','7'), ('-','J'), ('L','-'), ('F','-'), ('L', 'J')]
-
 def get_start_pos(graph):
     for row in range(len(graph)):
         for col in range(len(graph[row])):
@@ -28,7 +26,7 @@ def get_start_pos(graph):
 def part_two(seen, graph):
     spos = get_start_pos(graph)
     big_graph_cycle = set([(2*x+1, 2*y+1) for x,y in seen])
-    graph[spos[0]][spos[1]] = '|'
+    graph[spos[0]][spos[1]] = '|' # modified to not have to deal with the 'S' case
     # graph[spos[0]][spos[1]] = 'F'
 
     # double to width and height, align stuff in the rows and columns
