@@ -14,11 +14,7 @@ def shortest_path(graph):
                 col_weights[col] = 1
                 break
             
-    node_locations = []
-    for row in range(len(graph)):
-        for col in range(len(graph[0])):
-            if graph[row][col] == '#':
-                node_locations.append((row, col))
+    node_locations = [(row, col) for row in range(len(graph)) for col in range(len(graph[0])) if graph[row][col] == '#']
 
     distances = []
     for i, nx in enumerate(node_locations):
