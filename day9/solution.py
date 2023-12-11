@@ -16,5 +16,5 @@ def calculate(history, part):
         return res
 
 with open("input.txt") as f:
-    pred = [calculate(list(map(int,line.split()))) for line in f.readlines()]
+    pred = [calculate(list(map(int,line.split())), 1) for line in f.readlines()]
     print(sum(pred))
